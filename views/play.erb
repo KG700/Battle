@@ -1,4 +1,9 @@
-<%= @player_1.name %> v.s <%= @player_2.name %><br>
-<%= @player_1.name %>: HP <%= @player_1.hit_points %>
-<%= @player_2.name %>: HP <%= @player_2.hit_points %>
-<a href="/attack">Attack!</a>
+<h2><%= $game.player_1.name %> v.s <%= $game.player_2.name %></h2><br><br>
+<%= $game.player_1.name %>: HP <%= $game.player_1.hit_points %><br>
+<%= $game.player_2.name %>: HP <%= $game.player_2.hit_points %><br><br>
+
+<form action='/attack' method='post'>
+  <div><%= "It's #{$game.opponent.name}'s turn!!"%>
+  <br>
+  <button>Attack!</button>
+</form>
