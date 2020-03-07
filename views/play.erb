@@ -3,7 +3,7 @@
 <%= $game.player_2.name %>: HP <%= $game.player_2.hit_points %><br><br>
 
 <form action='/attack' method='post'>
-  <div><%= "It's #{$game.opponent.name}'s turn!!"%>
+  <div><%= "It's #{$game.turn.name}'s turn!!"%>
   <br>
   <button>Attack!</button>
 </form>

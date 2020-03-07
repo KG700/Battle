@@ -32,6 +32,20 @@ class Battle < Sinatra::Base
 
   get '/attack' do
     erb(:attack)
+    #$game.switch_turn
+  end
+
+  get '/switch_players' do
+    if $game.opponent.hit_points == 0
+      redirect '/lose'
+    else
+      $game.switch_turn
+      redirect '/play'
+    end
+  end
+
+  get '/lose' do
+    "KARLA LOSES"
   end
 
   # start the server if ruby file executed directly
